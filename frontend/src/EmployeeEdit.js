@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Button, Container, Form, FormGroup, Input, Label, Col } from 'reactstrap';
 
 class EmployeeEdit extends Component {
 
@@ -64,6 +64,7 @@ class EmployeeEdit extends Component {
             return(
                 <div>
                 <Container>
+                    <Col sm={{size: 4, offset: 4}}>
                     {title}
                     {item.id ? <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
@@ -135,7 +136,7 @@ class EmployeeEdit extends Component {
                             </FormGroup>
                         </Form>
                     }
-
+                    </Col>
                 </Container>
             </div>);
 

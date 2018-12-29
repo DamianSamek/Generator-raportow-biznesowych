@@ -9,9 +9,6 @@ import {
     Nav,
     NavItem,
     NavLink,
-    Card,
-    CardTitle,
-    CardText,
     Row,
     Col
 } from 'reactstrap';
@@ -157,22 +154,18 @@ class EmployeeList extends Component {
         return (
             <div>
                 <Container fluid>
-
                     <div>
                         <Row><Col sm={{size: 8, offset: 2}}>
                         <Nav tabs >
                             <NavItem>
                                 <NavLink className={classnames({active: this.state.activeTab === '1'})}
-                                         onClick={() => {
-                                             this.toggle('1');
-                                         }}
+                                         onClick={() => {this.toggle('1');}}
                                 >
                                     Zarządzaj pracownikami
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className={classnames({active: this.state.activeTab === '2'})}
-
                                          onClick={() => {
                                              this.toggle('2');
                                          }}
@@ -183,8 +176,7 @@ class EmployeeList extends Component {
                             <NavItem>
                                 <NavLink
                                     className={classnames({active: this.state.activeTab === '3'})}
-                                    onClick={() => {
-                                        this.toggle('3');
+                                    onClick={() => {this.toggle('3');
                                     }}
                                 >
                                     Wykres słupkowy poziomy
@@ -212,6 +204,7 @@ class EmployeeList extends Component {
                         </Nav>
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
+                                <Container dark>
                                         <div className="float-right">
                                             <Button color="success" tag={Link} to="/manager/employee/new">Dodaj
                                                 pracownika</Button>
@@ -240,72 +233,41 @@ class EmployeeList extends Component {
                                         <div className="float-right">
                                             <Button size="sm" outline color="info" onClick={this.exportToXlsx}>Eksportuj
                                                 do XLSX</Button>
-                                        </div>
-
+                                        </div> </Container>
                             </TabPane>
                             <TabPane tabId="2">
-
-                                        <div>
-
-                                            <Bar
-                                                data={data} options={{
-                                                    scales: {
-                                                        yAxes: [{
-                                                            ticks: {
-                                                                min: 0
-                                                            }
-                                                        }]
-                                                    }
-                                            }}
-                                            />
-                                        </div>
+                                <Container>
+                                    <div>
+                                    <Bar data={data} options={{scales: {yAxes: [{ticks: {min: 0}}]}}}/>
+                                    </div></Container>
 
 
 
                             </TabPane>
                             <TabPane tabId="3">
-                                    <div>
-
-                                        <HorizontalBar data={data} options={{
-                                            scales: {
-                                                xAxes: [{
-                                                    ticks: {
-                                                        min: 0
-                                                    }
-                                                }]
-                                            }
-                                        }}/>
-                                    </div>
+                                <Container>
+                                <div>
+                                    <HorizontalBar data={data} options={{scales: {xAxes: [{ticks: {min: 0}}]}}}/>
+                                </div> </Container>
                             </TabPane>
                             <TabPane tabId="4">
-
-
-                                    <div>
-
-                                        <Pie data={data}/>
-                                    </div>
-
-
-                            </TabPane>
-
+                                <Container>
+                                <div>
+                                    <Pie data={data}/>
+                                </div></Container>
+                                </TabPane>
                             <TabPane tabId="5">
-
-
-                                    <div>
-
-                                        <Doughnut data={data}/>
-                                    </div>
+                                <Container>
+                                <div>
+                                    <Doughnut data={data}/>
+                                </div></Container>
 
                             </TabPane>
                         </TabContent>
                         </Col></Row>
                     </div>
-
-
-                </Container>
-
-
-            </div>
+                        </Container>
+                        </div>
         );
     }
 }

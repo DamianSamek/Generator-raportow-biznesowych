@@ -1,8 +1,11 @@
 package pl.edu.ur.reportgenerator.report;
 
 import java.awt.Color;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 import pl.edu.ur.reportgenerator.model.Employee;
 
@@ -100,7 +103,7 @@ public class EmployeeReport {
         report.setDefaultEncoding("UTF-8");
 
         AbstractColumn columnEmpNo = createColumn("id", Integer.class, "Id", 30, headerStyle, detailTextStyle);
-        AbstractColumn columnFirstName = createColumn("firstName", String.class, "Imię", 30, headerStyle, detailTextStyle);
+        AbstractColumn columnFirstName = createColumn("firstName", String.class, "Imie", 30, headerStyle, detailTextStyle);
         AbstractColumn columnSecondName = createColumn("secondName", String.class, "Nazwisko", 30, headerStyle, detailTextStyle);
         AbstractColumn columnEmail = createColumn("email", String.class, "Adres e-mail", 40, headerStyle, detailTextStyle);
         AbstractColumn columnPhone = createColumn("phone", String.class, "Numer telefonu", 30, headerStyle, detailTextStyle);
@@ -118,7 +121,9 @@ public class EmployeeReport {
 
         report.setTitle("Lista pracowników");
         report.setTitleStyle(titleStyle.build());
-        report.setSubtitle("Raport sporządzony na podstawie odczytu rekordów z bazy danych");
+        LocalDateTime ldt = LocalDateTime.now();
+
+        report.setSubtitle("Wygenerowano "+ DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss").format(ldt));
         report.setSubtitleStyle(subTitleStyle.build());
         report.setUseFullPageWidth(true);
         return report.build();
