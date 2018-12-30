@@ -58,12 +58,18 @@ Zewnętrzne biblioteki:
 
 
 ## Podręcznik użytkownika
-Po uruchomieniu aplikacji użytkownik zostaje przeniesiony do widoku listy pracowników.
-![1](screenshots/1.png)
+####  Po uruchomieniu aplikacji użytkownik zostaje przeniesiony do widoku listy pracowników.
+![1](screenshots/1.png) <br/>
+
+
 Po kliknięciu przycisku "Dodaj pracownika" w prawym górnym rogu, użytkownik zostaje przeniesiony do formularza dodawania.
-![2](screenshots/2.png)
+![2](screenshots/2.png) <br/>
+
+
 Po kliknięciu "Edytuj" w wierszu tabeli należącym do jednego z pracowników, użytkownik zostaje przeniesiony do formularza edycji.
-![3](screenshots/3.png)
+![3](screenshots/3.png) <br/>
+
+
 Po kliknięciu "Zwolnij" pracownik jest usuwany z bazy danych,
  a widok listy pracowników odświeża się.
 
