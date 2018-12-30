@@ -58,34 +58,31 @@ Zewnętrzne biblioteki:
 
 
 ## Podręcznik użytkownika
-####  Po uruchomieniu aplikacji użytkownik zostaje przeniesiony do widoku listy pracowników.
+####  Po uruchomieniu aplikacji użytkownik zostaje przeniesiony do widoku listy pracowników. <br />
 ![1](screenshots/1.png) <br/>
 
 
-Po kliknięciu przycisku "Dodaj pracownika" w prawym górnym rogu, użytkownik zostaje przeniesiony do formularza dodawania.
+#### Po kliknięciu przycisku "Dodaj pracownika" w prawym górnym rogu, użytkownik zostaje przeniesiony do formularza dodawania. <br />
 ![2](screenshots/2.png) <br/>
 
 
-Po kliknięciu "Edytuj" w wierszu tabeli należącym do jednego z pracowników, użytkownik zostaje przeniesiony do formularza edycji.
+#### Po kliknięciu "Edytuj" w wierszu tabeli należącym do jednego z pracowników, użytkownik zostaje przeniesiony do formularza edycji. <br />
 ![3](screenshots/3.png) <br/>
 
 
-Po kliknięciu "Zwolnij" pracownik jest usuwany z bazy danych,
- a widok listy pracowników odświeża się.
+#### Po kliknięciu "Zwolnij" pracownik jest usuwany z bazy danych, a widok listy pracowników odświeża się. <br />
 
-Po kliknięciu przycisku "Eksportuj do XLSX" użytkownik może otworzyć 
-lub pobrać plik raportu w formacie arkusza kalkulacyjnego.
-![5](screenshots/5.png)
+#### Po kliknięciu przycisku "Eksportuj do XLSX" użytkownik może otworzyć lub pobrać plik raportu w formacie arkusza kalkulacyjnego. <br />
+![5](screenshots/5.png) <br />
 
-Po kliknięciu przycisku "Eksportuj do PDF" użytkownik może otworzyć 
-lub pobrać plik raportu w formacie dokumentu PDF.
-![4](screenshots/4.png)
-Po przejściu do zakładki "Wykres słupkowy" w górnym panelu nawigacyjnym, zostaje wyświetlony wykres słupkowy stworzony na podstawie wynagrodzeń pracowników.
-![6](screenshots/6.png)
+#### Po kliknięciu przycisku "Eksportuj do PDF" użytkownik może otworzyć lub pobrać plik raportu w formacie dokumentu PDF. <br />
+![4](screenshots/4.png) <br />
+#### Po przejściu do zakładki "Wykres słupkowy" w górnym panelu nawigacyjnym, zostaje wyświetlony wykres słupkowy stworzony na podstawie wynagrodzeń pracowników. <br />
+![6](screenshots/6.png) <br />
 
-Po przejściu do zakładki "Wykres słupkowy poziomy" w górnym panelu nawigacyjnym, zostaje wyświetlony poziomy wykres słupkowy.
-![7](screenshots/7.png)
-Po przejściu do zakładki "Wykres kołowy", zostaje wyświetlony wykres kołowy.
-![8](screenshots/8.png)
-Po przejściu do zakładki "Wykres pierścieniowy", zostaje wyświetlony wykres pierścieniowy.
-![9](screenshots/9.png)
+#### Po przejściu do zakładki "Wykres słupkowy poziomy" w górnym panelu nawigacyjnym, zostaje wyświetlony poziomy wykres słupkowy. <br />
+![7](screenshots/7.png) <br />
+#### Po przejściu do zakładki "Wykres kołowy", zostaje wyświetlony wykres kołowy. <br />
+![8](screenshots/8.png) <br />
+#### Po przejściu do zakładki "Wykres pierścieniowy", zostaje wyświetlony wykres pierścieniowy. <br />
+![9](screenshots/9.png) <br />
