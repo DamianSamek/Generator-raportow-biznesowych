@@ -59,25 +59,27 @@ Zewnętrzne biblioteki:
 
 ## Podręcznik użytkownika
 Po uruchomieniu aplikacji użytkownik zostaje przeniesiony do widoku listy pracowników.
-
+![1](screenshots/1.png)
 Po kliknięciu przycisku "Dodaj pracownika" w prawym górnym rogu, użytkownik zostaje przeniesiony do formularza dodawania.
-
+![2](screenshots/2.png)
 Po kliknięciu "Edytuj" w wierszu tabeli należącym do jednego z pracowników, użytkownik zostaje przeniesiony do formularza edycji.
-
+![3](screenshots/3.png)
 Po kliknięciu "Zwolnij" pracownik jest usuwany z bazy danych,
  a widok listy pracowników odświeża się.
 
 Po kliknięciu przycisku "Eksportuj do XLSX" użytkownik może otworzyć 
 lub pobrać plik raportu w formacie arkusza kalkulacyjnego.
+![5](screenshots/5.png)
 
 Po kliknięciu przycisku "Eksportuj do PDF" użytkownik może otworzyć 
 lub pobrać plik raportu w formacie dokumentu PDF.
-
+![4](screenshots/4.png)
 Po przejściu do zakładki "Wykres słupkowy" w górnym panelu nawigacyjnym, zostaje wyświetlony wykres słupkowy stworzony na podstawie wynagrodzeń pracowników.
+![6](screenshots/6.png)
 
 Po przejściu do zakładki "Wykres słupkowy poziomy" w górnym panelu nawigacyjnym, zostaje wyświetlony poziomy wykres słupkowy.
-
+![7](screenshots/7.png)
 Po przejściu do zakładki "Wykres kołowy", zostaje wyświetlony wykres kołowy.
-
+![8](screenshots/8.png)
 Po przejściu do zakładki "Wykres pierścieniowy", zostaje wyświetlony wykres pierścieniowy.
-
+![9](screenshots/9.png)
