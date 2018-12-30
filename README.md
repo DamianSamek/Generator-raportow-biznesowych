@@ -86,3 +86,8 @@ Zewnętrzne biblioteki:
 ![8](screenshots/8.png) <br />
 #### Po przejściu do zakładki "Wykres pierścieniowy", zostaje wyświetlony wykres pierścieniowy. <br />
 ![9](screenshots/9.png) <br />
+
+##### Wykonali:
+- Dariusz Niemczycki
+- Damian Samek
+Informatyka III, AI L1
