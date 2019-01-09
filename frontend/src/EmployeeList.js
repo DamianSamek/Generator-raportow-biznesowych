@@ -49,17 +49,18 @@ class EmployeeList extends Component {
     }
 
     async remove(id) {
-        await fetch(`/api/employee/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': localStorage.getItem("token")
-            }
-        }).then(() => {
-            let updatedEmployees = [...this.state.employees].filter(i => i.id !== id);
-            this.setState({employees: updatedEmployees});
-        });
+        if(window.confirm("Czy na pewno chcesz zwolnić tego pracownika?")) {
+            await fetch(`/api/employee/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            }).then(() => {
+                let updatedEmployees = [...this.state.employees].filter(i => i.id !== id);
+                this.setState({employees: updatedEmployees});
+            });
+        }
     }
 
     exportToPdf() {
@@ -122,7 +123,7 @@ class EmployeeList extends Component {
                 <td>
                     <ButtonGroup>
                         <Button size="sm" color="primary" tag={Link}
-                                to={"/manager/employee/" + employee.id}>Edytuj</Button>
+                                to={"/employee/" + employee.id}>Edytuj</Button>
                         <Button size="sm" color="danger" onClick={() => this.remove(employee.id)}>Zwolnij</Button>
                     </ButtonGroup>
                 </td>
@@ -204,13 +205,16 @@ class EmployeeList extends Component {
                         </Nav>
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
-                                <Container dark>
+                                <Container>
                                         <div className="float-right">
-                                            <Button color="success" tag={Link} to="/manager/employee/new">Dodaj
+                                            <Button color="success" tag={Link} to="/employee/new">Dodaj
                                                 pracownika</Button>
                                         </div>
 
-                                        <Table className="mt-4">
+                                    {(employees.length === 0) ?
+                                        <h1>Brak pracowników!</h1>
+                                        :
+                                       <div> <Table className="mt-4 table table-hover">
                                             <thead>
                                             <tr>
                                                 <th width="20%">Imię</th>
@@ -226,6 +230,8 @@ class EmployeeList extends Component {
                                             {employeesList}
                                             </tbody>
                                         </Table>
+
+
                                         <div className="float-right">
                                             <Button size="sm" outline color="info" onClick={this.exportToPdf}>Eksportuj
                                                 do PDF</Button>
@@ -233,12 +239,15 @@ class EmployeeList extends Component {
                                         <div className="float-right">
                                             <Button size="sm" outline color="info" onClick={this.exportToXlsx}>Eksportuj
                                                 do XLSX</Button>
-                                        </div> </Container>
+                                        </div></div> }
+                        </Container>
                             </TabPane>
                             <TabPane tabId="2">
                                 <Container>
                                     <div>
-                                    <Bar data={data} options={{scales: {yAxes: [{ticks: {min: 0}}]}}}/>
+                                        {(salaries.length===0) ?
+                                            <h1>Brak danych</h1>
+                                            : <Bar data={data} options={{scales: {yAxes: [{ticks: {min: 0}}]}}}/>}
                                     </div></Container>
 
 
@@ -247,19 +256,25 @@ class EmployeeList extends Component {
                             <TabPane tabId="3">
                                 <Container>
                                 <div>
-                                    <HorizontalBar data={data} options={{scales: {xAxes: [{ticks: {min: 0}}]}}}/>
+                                    {(salaries.length===0) ?
+                                        <h1>Brak danych</h1> :
+                                        <HorizontalBar data={data} options={{scales: {xAxes: [{ticks: {min: 0}}]}}}/>}
+
                                 </div> </Container>
                             </TabPane>
                             <TabPane tabId="4">
                                 <Container>
                                 <div>
-                                    <Pie data={data}/>
+                                    {(salaries.length===0) ?
+                                    <h1>Brak danych</h1> : <Pie data={data}/>}
+
                                 </div></Container>
                                 </TabPane>
                             <TabPane tabId="5">
                                 <Container>
                                 <div>
-                                    <Doughnut data={data}/>
+                                    {(salaries.length===0) ? <h1>Brak danych</h1> :
+                                    <Doughnut data={data}/>}
                                 </div></Container>
 
                             </TabPane>

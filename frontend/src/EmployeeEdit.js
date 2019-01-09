@@ -55,8 +55,6 @@ class EmployeeEdit extends Component {
     }
 
     render() {
-        if(localStorage.getItem("loggedUserRole")==="ROLE_MANAGER")
-        {
             const {item} = this.state;
             const title = <h2>{item.id ? 'Edycja pracownika' : 'Dodawanie pracownika'}</h2>;
             console.log(item);
@@ -69,31 +67,31 @@ class EmployeeEdit extends Component {
                     {item.id ? <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
                                 <Label for="firstName">Imię</Label>
-                                <Input type="text" name="firstName" id="firstName" value={item.firstName || ''}
+                                <Input required type="text" name="firstName" id="firstName" value={item.firstName || ''}
                                        onChange={this.handleChange} autoComplete="name"/>
                             </FormGroup>
                             <FormGroup>
                                 <Label for="secondName">Nazwisko</Label>
-                                <Input type="text" name="secondName" id="secondName" value={item.secondName || ''}
+                                <Input required type="text" name="secondName" id="secondName" value={item.secondName || ''}
                                        onChange={this.handleChange} autoComplete="address-level1"/>
                             </FormGroup>
                             <FormGroup>
                                 <Label for="email">E-mail</Label>
-                                <Input type="text" name="email" id="email" value={item.email || ''}
+                                <Input required type="email" name="email" id="email" value={item.email || ''}
                                        onChange={this.handleChange} autoComplete="address-level1"/>
                             </FormGroup>
                             <FormGroup>
 
                             </FormGroup>
                             <Label for="phone">Telefon</Label>
-                            <Input type="text" name="phone" id="phone" value={item.phone || ''}
+                            <Input required type="text" pattern="\d{9}" title="9-cyfrowy numer telefonu" name="phone" id="phone" value={item.phone || ''}
                                    onChange={this.handleChange} autoComplete="address-level1"/>
 
                             <FormGroup>
 
                             </FormGroup>
                             <Label for="phone">Wynagrodzenie</Label>
-                            <Input type="text" name="salary" id="salary" value={item.salary || ''}
+                            <Input required type="number" name="salary" id="salary" value={item.salary || ''}
                                    onChange={this.handleChange} autoComplete="address-level1"/>
 
                             <FormGroup>
@@ -105,29 +103,29 @@ class EmployeeEdit extends Component {
                         <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
                                 <Label for="firstName">Imię</Label>
-                                <Input type="text" name="firstName" id="firstName" value={item.firstName || ''}
+                                <Input required type="text" name="firstName" id="firstName" value={item.firstName || ''}
                                        onChange={this.handleChange} autoComplete="name"/>
                             </FormGroup>
                             <FormGroup>
                                 <Label for="secondName">Nazwisko</Label>
-                                <Input type="text" name="secondName" id="secondName" value={item.secondName || ''}
+                                <Input required type="text" name="secondName" id="secondName" value={item.secondName || ''}
                                        onChange={this.handleChange} autoComplete="address-level1"/>
                             </FormGroup>
                             <FormGroup>
                             </FormGroup>
                             <Label for="email">E-mail</Label>
-                            <Input type="text" name="email" id="email" value={item.email || ''}
+                            <Input required type="email" name="email" id="email" value={item.email || ''}
                                    onChange={this.handleChange} autoComplete="address-level1"/>
 
                             <FormGroup>
                             </FormGroup>
                             <Label for="phone">Telefon</Label>
-                            <Input type="text" name="phone" id="phone" value={item.phone || ''}
+                            <Input required type="text" pattern="\d{9}" title="9-cyfrowy numer telefonu" name="phone" id="phone" value={item.phone || ''}
                                    onChange={this.handleChange} autoComplete="address-level1"/>
                             <FormGroup>
                             </FormGroup>
                             <Label for="phone">Wynagrodzenie</Label>
-                            <Input type="text" name="salary" id="salary" value={item.salary || ''}
+                            <Input required type="number" name="salary" id="salary" value={item.salary || ''}
                                    onChange={this.handleChange} autoComplete="address-level1"/>
 
                             <FormGroup>
@@ -139,9 +137,6 @@ class EmployeeEdit extends Component {
                     </Col>
                 </Container>
             </div>);
-
-
-        } else return <div>BRAK DOSTĘPU</div>
     }
 }
 

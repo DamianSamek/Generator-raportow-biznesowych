@@ -16,7 +16,7 @@ class App extends Component {
 
               )}/>
             <Route path='/employee' exact={true} component={EmployeeList}/>
-              <Route path='/manager/employee/:id' component={EmployeeEdit}/>
+              <Route path='/employee/:id' component={EmployeeEdit}/>
 
 
           </Switch>
